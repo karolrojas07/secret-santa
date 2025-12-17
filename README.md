@@ -29,6 +29,29 @@ Luego abre en tu navegador:
 http://localhost:3000/index.html
 ```
 
+## Acceso remoto con Ngrok
+
+Si quieres que otras personas (fuera de tu red local) puedan usar la app:
+
+1. Crea una cuenta y descarga [ngrok](https://ngrok.com/) para tu sistema operativo.
+2. Sigue las instrucciones de ngrok para configurar tu **authtoken** (solo la primera vez).
+3. Inicia el servidor de la app en este proyecto:
+
+```bash
+npm start
+```
+
+4. En otra terminal, ejecuta:
+
+```bash
+ngrok http 3000
+```
+
+5. ngrok te mostrará una URL pública (por ejemplo `https://algo.ngrok-free.app`).  
+   Comparte esa URL.
+
+Así, cualquiera podrá abrir la página del amigo secreto desde internet mientras el servidor y ngrok estén en ejecución.
+
 ## Cómo funciona
 
 - El archivo `data.json` contiene:
