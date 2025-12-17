@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amigo Secreto</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f4f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 24px 20px 28px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+      max-width: 420px;
+      width: 92%;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+      color: #111827;
+    }
+
+    p.description {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #374151;
+      font-size: 0.9rem;
+    }
+
+    select,
+    button {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    select {
+      border: 1px solid #d1d5db;
+      background-color: #f9fafb;
+      margin-bottom: 12px;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+      background-color: #ffffff;
+    }
+
+    button {
+      border: none;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.05s ease, box-shadow 0.15s ease;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+    }
+
+    button:hover:not(:disabled) {
+      background: linear-gradient(135deg, #1d4ed8, #1d4ed8);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.35);
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .hint {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: left;
+    }
+
+    #message {
+      margin-top: 18px;
+      min-height: 22px;
+      font-size: 1rem;
+    }
+
+    #message.error {
+      color: #b91c1c;
+    }
+
+    #message.success {
+      color: #065f46;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Amigo Secreto 🎅</h1>
+    <p class="description">
+      Selecciona tu nombre y descubre quién es tu amigo secreto.
+      Cada persona solo puede ver su amigo una sola vez.
+    </p>
+
+    <label for="participant">Tu nombre</label>
+    <select id="participant">
+    </select>
+    <div class="hint">
+      Asegúrate de elegir bien tu nombre. Una vez revelado no se puede repetir.
+    </div>
+
+    <button id="btnDiscover">Descubrir mi amigo secreto</button>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

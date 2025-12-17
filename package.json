@@ -1,0 +1,14 @@
+{
+  "name": "secret_santa",
+  "version": "1.0.0",
+  "description": "Juego de amigo secreto con persistencia en archivo JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+
