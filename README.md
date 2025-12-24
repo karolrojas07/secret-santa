@@ -15,6 +15,12 @@ En la carpeta del proyecto (`secret_santa`):
 npm install
 ```
 
+Create your `data.json` file and change the participants names as you convenience:
+
+```bash
+cp data.example.json data.json
+```
+
 ## Ejecución
 
 Inicia el servidor Express:
